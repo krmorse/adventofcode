@@ -25,6 +25,17 @@
                 "${workspaceFolder}/2/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "3",
+            "program": "${workspaceFolder}/3/fabric.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/3/input1"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
