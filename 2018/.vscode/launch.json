@@ -33,7 +33,18 @@
             "program": "${workspaceFolder}/3/fabric.js",
             "args": [
                 "<",
-                "${workspaceFolder}/3/input1"
+                "${workspaceFolder}/3/input"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "4",
+            "program": "${workspaceFolder}/4/sleepyguard.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/4/input"
             ],
             "console": "integratedTerminal"
         }
