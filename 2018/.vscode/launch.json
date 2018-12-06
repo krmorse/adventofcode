@@ -58,6 +58,17 @@
                 "${workspaceFolder}/5/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "6",
+            "program": "${workspaceFolder}/6/coords.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/6/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
