@@ -1,10 +1,6 @@
 const inputUtils = require('../utils/input');
 
-let program;
-
-inputUtils.getInput().then((input) => {
-    program = input[0].split(',').map(code => parseInt(code, 10));
-   
+const compute = (program) => {
     let index = 0, done = false;
     while(!done) {
         switch(program[index]) {
@@ -20,6 +16,26 @@ inputUtils.getInput().then((input) => {
         }
         index += 4;
     }
-    console.log('Result:', program[0]);
-    console.log('Final state:', program);
+    return program[0];
+}
+
+inputUtils.getInput().then((input) => {
+    const initialState = input[0].split(',').map(code => parseInt(code, 10));
+
+    let answer = -1;
+    for (let noun = 0; noun < 100 && answer === -1; noun++ ) {
+        for(let verb = 0; verb < 100 && answer === -1; verb++) {
+            const program = initialState.slice(0);
+            program[1] = noun;
+            program[2] = verb;
+            
+            console.log(`Running program [noun=${noun},verb=${verb}]...`)
+            const result = compute(program);
+
+            if (result === 19690720) {
+                answer = 100 * noun + verb;
+                console.log('Result: ', answer);
+            }
+        }
+    }
 });
