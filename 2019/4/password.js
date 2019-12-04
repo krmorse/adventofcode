@@ -1,6 +1,6 @@
 const inputUtils = require('../utils/input');
 
-const HAS_DOUBLE_REGEX = /11|22|33|44|55|66|77|88|99|00/;
+const HAS_DOUBLE_REGEX = /([^1]|^)11([^1]|$)|([^2]|^)22([^2]|$)|([^3]|^)33([^3]|$)|([^4]|^)44([^4]|$)|([^5]|^)55([^5]|$)|([^6]|^)66([^6]|$)|([^7]|^)77([^7]|$)|([^8]|^)88([^8]|$)|([^9]|^)99([^9]|$)/;
 
 const hasDouble = (password) => HAS_DOUBLE_REGEX.test(password.toString());
 
