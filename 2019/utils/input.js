@@ -1,4 +1,7 @@
 const readline = require('readline');
+const readlineSync = require('readline-sync');
+
+const prompt = (message) => readlineSync.question(message);
 
 function getInput() {
     return new Promise(function(resolve, reject) {
@@ -22,5 +25,6 @@ function getInput() {
 }
 
 module.exports = {
-    getInput
+    getInput,
+    prompt
 };

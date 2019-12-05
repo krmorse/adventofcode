@@ -47,6 +47,17 @@
                 "${workspaceFolder}/4/input"
             ],
             "console": "integratedTerminal"
-        }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "5",
+            "program": "${workspaceFolder}/5/intcode.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/5/input"
+            ],
+            "console": "integratedTerminal"
+        },
     ]
 }
