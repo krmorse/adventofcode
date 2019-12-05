@@ -13,20 +13,21 @@ const compute = (program) => {
     while(!done) {
         const opCode = program[index] % 100;
         const paramModes = program[index].toString().split('').reverse().slice(2).map(p => parseInt(p, 10));
+        let value;
         switch(opCode) {
             case 99:
                 done = true;
                 break;
             case 1:
-                const addValue = readValue(program, program[index+1], paramModes[0]) + 
+                value = readValue(program, program[index+1], paramModes[0]) + 
                     readValue(program, program[index+2], paramModes[1]);
-                writeValue(program, program[index+3], paramModes[2], addValue);
+                writeValue(program, program[index+3], paramModes[2], value);
                 index += 4;
                 break;
             case 2:
-                const multiplyValue = readValue(program, program[index+1], paramModes[0]) * 
+                value = readValue(program, program[index+1], paramModes[0]) * 
                     readValue(program, program[index+2], paramModes[1]);
-                writeValue(program, program[index+3], paramModes[2], multiplyValue);
+                writeValue(program, program[index+3], paramModes[2], value);
                 index += 4;
                 break;
             case 3:
@@ -37,6 +38,34 @@ const compute = (program) => {
             case 4:
                 console.log('Output:', readValue(program, program[index+1], paramModes[0]));
                 index += 2;
+                break;
+            case 5:
+                value = readValue(program, program[index+1], paramModes[0]);
+                if (value) {
+                    index = readValue(program, program[index+2], paramModes[1]);
+                } else {
+                    index += 3;
+                }
+                break;
+            case 6:
+                value = readValue(program, program[index+1], paramModes[0]);
+                if (!value) {
+                    index = readValue(program, program[index+2], paramModes[1]);
+                } else {
+                    index += 3;
+                }
+                break;
+            case 7:
+                value = readValue(program, program[index+1], paramModes[0]);
+                const value2 = readValue(program, program[index+2], paramModes[1]);
+                writeValue(program, program[index+3], paramModes[2], value < value2 ? 1 : 0)
+                index += 4;
+                break;
+            case 8:
+                value = readValue(program, program[index+1], paramModes[0]);
+                const val2 = readValue(program, program[index+2], paramModes[1]);
+                writeValue(program, program[index+3], paramModes[2], value === val2 ? 1 : 0)
+                index += 4;
                 break;
         }
     }
