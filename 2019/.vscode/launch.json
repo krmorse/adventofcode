@@ -59,5 +59,16 @@
             ],
             "console": "integratedTerminal"
         },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "6",
+            "program": "${workspaceFolder}/6/orbits.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/6/input"
+            ],
+            "console": "integratedTerminal"
+        }
     ]
 }
