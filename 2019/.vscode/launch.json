@@ -69,6 +69,17 @@
                 "${workspaceFolder}/6/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "7",
+            "program": "${workspaceFolder}/7/amplifier.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/7/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
