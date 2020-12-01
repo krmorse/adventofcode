@@ -12,7 +12,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/1/fuelreq.js",
+            "program": "${workspaceFolder}/1/expense.js",
             "args": [
                 "<",
                 "${workspaceFolder}/1/input"
