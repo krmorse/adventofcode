@@ -47,6 +47,20 @@
                 "${workspaceFolder}/3/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "4",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/4/passport.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/4/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
