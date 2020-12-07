@@ -89,6 +89,20 @@
                 "${workspaceFolder}/6/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "7",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/7/bags.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/7/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
