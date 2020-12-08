@@ -103,6 +103,20 @@
                 "${workspaceFolder}/7/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "8",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/8/console.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/8/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
