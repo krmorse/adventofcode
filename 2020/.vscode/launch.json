@@ -215,6 +215,20 @@
                 "${workspaceFolder}/14/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "15",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/15/memory.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/15/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
