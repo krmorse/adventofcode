@@ -229,6 +229,20 @@
                 "${workspaceFolder}/15/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "16",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/16/tickets.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/16/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
