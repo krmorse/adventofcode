@@ -243,6 +243,20 @@
                 "${workspaceFolder}/16/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "18",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/18/math2.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/18/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
