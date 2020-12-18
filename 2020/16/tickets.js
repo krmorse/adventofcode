@@ -75,11 +75,7 @@ const part2 = () => {
       });
     };
 
-    const errorRate = invalidTicketValues.reduce(
-      (accum, val) => accum + val,
-      0
-    );
-    console.log(errorRate);
+    //this doesn't work...
   });
 };
 
