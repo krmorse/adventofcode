@@ -247,6 +247,20 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "17",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/17/conway.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/17/input"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "18",
             "skipFiles": [
                 "<node_internals>/**"
