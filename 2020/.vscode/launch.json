@@ -271,6 +271,48 @@
                 "${workspaceFolder}/18/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "19",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/19/monster.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/19/input"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "21",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/21/allergens.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/21/input"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "22",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/22/combat.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/22/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
