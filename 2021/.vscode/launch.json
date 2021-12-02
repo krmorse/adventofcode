@@ -18,6 +18,20 @@
                 "${workspaceFolder}/1/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "2",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/2/submarine.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/2/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
