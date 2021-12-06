@@ -74,6 +74,20 @@
                 "${workspaceFolder}/5/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "6",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/6/fish.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/6/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
