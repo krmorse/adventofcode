@@ -116,6 +116,20 @@
                 "${workspaceFolder}/8/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "9",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/9/smoke.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/9/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
