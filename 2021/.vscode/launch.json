@@ -144,6 +144,20 @@
                 "${workspaceFolder}/10/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "11",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/11/octoblob.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/11/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
