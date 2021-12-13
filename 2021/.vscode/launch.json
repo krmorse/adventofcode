@@ -158,6 +158,20 @@
                 "${workspaceFolder}/11/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "12",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/12/paths.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/12/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
