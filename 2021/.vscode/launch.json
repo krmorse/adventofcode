@@ -186,6 +186,20 @@
                 "${workspaceFolder}/13/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "14",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/14/polymer.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/14/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
