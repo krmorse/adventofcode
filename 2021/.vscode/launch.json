@@ -172,6 +172,20 @@
                 "${workspaceFolder}/12/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "13",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/13/fold.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/13/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
