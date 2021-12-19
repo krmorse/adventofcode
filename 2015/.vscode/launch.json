@@ -130,6 +130,20 @@
                 "${workspaceFolder}/9/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "10",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/10/looksay.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/10/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
