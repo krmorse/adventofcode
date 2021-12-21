@@ -214,6 +214,20 @@
                 "${workspaceFolder}/15/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "21",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/21/dice.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/21/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
