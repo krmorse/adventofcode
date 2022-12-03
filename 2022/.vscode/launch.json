@@ -31,6 +31,20 @@
                 "${workspaceFolder}/2/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "3",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/3/rucksack.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/3/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
