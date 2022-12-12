@@ -40,12 +40,19 @@ const part2 = () => {
       const [op, val] = instruction.split(' ');
       switch (op) {
         case "noop":
+          if (Math.abs(cycle%40 - x) <= 1) {
+            output += "#"
+          } else {
+            output += ".";
+          }
+          if (cycle % 40 === 39) {
+            output += "\n";
+          }
           cycle++;
           break;
         case "addx":
           for (let i = 0; i < 2; i++) {
-            cycle++;
-            if (Math.abs(cycle%40 - x) <= 1) {
+            if (Math.abs(cycle%40- x) <= 1) {
               output += "#"
             } else {
               output += ".";
@@ -53,6 +60,7 @@ const part2 = () => {
             if (cycle % 40 === 39) {
               output += "\n";
             }
+            cycle++;
           }
           x += parseInt(val, 10);
           break;
@@ -60,14 +68,7 @@ const part2 = () => {
           throw new Error("unsupported instruction:", op);
       }
 
-      if (Math.abs(cycle%40 - x) <= 1) {
-        output += "#"
-      } else {
-        output += ".";
-      }
-      if (cycle % 40 === 39) {
-        output += "\n";
-      }
+      
     });
     console.log(output);
   });
