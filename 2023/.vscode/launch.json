@@ -17,6 +17,20 @@
                 "${workspaceFolder}/1/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "2",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/2/bagocubes.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/2/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
