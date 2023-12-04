@@ -15,8 +15,7 @@ const isPartNumber = (part, partX, partY, input) => {
   }
 }
 
-const part1 = async () => {
-  const input = await getInput();
+const getParts = (input) => {
   const partNumbers = [];
   input.forEach((line, y) => {
     const parts = line.match(/(\d+)/g) ?? [];
@@ -24,19 +23,46 @@ const part1 = async () => {
     parts.forEach(part => {
       const startIndex = line.indexOf(part, x);
       if (isPartNumber(part, startIndex, y, input)) {
-        partNumbers.push(part);
+        partNumbers.push({ partNumber: parseInt(part, 10), x: startIndex, y });
       }
       x = startIndex + part.length;
     });
   });
+  return partNumbers;
+}
 
-  console.log(partNumbers)
-  console.log(partNumbers.reduce((result, partNumber) => result + parseInt(partNumber, 10), 0));
+const part1 = async () => {
+  const input = await getInput();
+  const parts = getParts(input);
+
+  console.log(parts.reduce((result, part) => result + part.partNumber, 0));
 };
 
 const part2 = async () => {
-  const input = parseInput(await getInput());
+  const input = await getInput();
+  const parts = getParts(input);
+  const gears = {};
+  parts.forEach((part) => {
+    console.log(part);
+    for (let y = part.y - 1; y <= part.y + 1; y++) {
+      if (y >= 0 && y < input.length) {
+        for (let x = part.x - 1; x <= part.x + part.partNumber.toString(10).length; x++) {
+          if (x >= 0 && x < input[y].length) {
+            if (input[y][x] === "*") {
+              if (!gears[`y=${y},x=${x}`]) {
+                gears[`y=${y},x=${x}`] = [];
+              }
+              gears[`y=${y},x=${x}`].push(part.partNumber);
+            }
+          }
+        }
+      }
+    }
+  });
 
+  console.log(Object.values(gears)
+    .filter((g) => g.length === 2)
+    .reduce((result, p) => result + (p[0]*p[1]), 0));
 };
 
-part1();
+part2();
