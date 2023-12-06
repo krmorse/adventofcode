@@ -59,6 +59,34 @@
                 "${workspaceFolder}/4/input"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "5",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/5/seeds.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/5/input"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "6",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/6/race.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/6/input"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
