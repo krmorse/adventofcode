@@ -18,5 +18,19 @@
             ],
             "console": "integratedTerminal"
         },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "2",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/2/reports.js",
+            "args": [
+                "<",
+                "${workspaceFolder}/2/input"
+            ],
+            "console": "integratedTerminal"
+        },
     ]
 }
